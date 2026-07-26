@@ -2,8 +2,8 @@ package com.alge.quickcard
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<CardView>(R.id.cardRandom).setOnClickListener {
+        findViewById<LinearLayout>(R.id.cardRandom).setOnClickListener {
             val intent = Intent(this, FlashcardActivity::class.java)
             intent.putExtra("TOPIC", "RANDOM")
             startActivity(intent)

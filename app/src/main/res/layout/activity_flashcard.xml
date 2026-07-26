@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
-    android:padding="16dp">
+    android:background="@drawable/bg_gradient_screen"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/tvTopicTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textSize="18sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="#1A1A1A"
+        android:textColor="@color/text_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -26,21 +26,41 @@
         android:layout_marginTop="6dp"
         android:textSize="14sp"
         android:gravity="center"
-        android:textColor="#888888"
+        android:textColor="@color/text_secondary"
         app:layout_constraintTop_toBottomOf="@id/tvTopicTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/btnShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="🔀 Rastgele Karıştır"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:background="@drawable/bg_button_shuffle"
+        android:stateListAnimator="@null"
+        android:textColor="@color/text_primary"
+        app:layout_constraintTop_toBottomOf="@id/tvCounter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
         android:id="@+id/cardContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="24dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:cardBackgroundColor="#1565C0"
-        app:layout_constraintTop_toBottomOf="@id/tvCounter"
+        android:background="@drawable/bg_card_front"
+        android:elevation="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/btnShuffle"
         app:layout_constraintBottom_toTopOf="@id/layoutButtons"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -51,8 +71,8 @@
             android:layout_height="match_parent"
             android:padding="28dp"
             android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textColor="@color/text_primary"
+            android:textSize="21sp"
             android:textStyle="bold" />
 
         <TextView
@@ -60,19 +80,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:padding="12dp"
+            android:padding="14dp"
             android:gravity="center"
             android:text="Cevabı görmek için karta dokun"
-            android:textColor="#CCFFFFFF"
+            android:textColor="#D9FFFFFF"
             android:textSize="12sp" />
 
-    </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/layoutButtons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +105,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="‹ Geri" />
+            android:paddingVertical="14dp"
+            android:text="‹  Geri"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_pill"
+            android:stateListAnimator="@null"
+            android:textColor="@color/text_primary" />
 
         <Button
             android:id="@+id/btnNext"
@@ -93,7 +119,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="İleri ›" />
+            android:paddingVertical="14dp"
+            android:text="İleri  ›"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_pill"
+            android:stateListAnimator="@null"
+            android:textColor="@color/text_primary" />
 
     </LinearLayout>
 
