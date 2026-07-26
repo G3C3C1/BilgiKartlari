@@ -9,7 +9,7 @@ data class Flashcard(
 object CardRepository {
 
     val allCards = listOf(
-        // --- İslamiyet Öncesi Türk Tarihi ---
+        // --- İslamiyet Öncesi Türk Tarihi deneme xxx ---
 
         Flashcard("Bilinen ilk kadın hükümdarı Tomris Hatun olan ve ordusunda Amazon adı verilen savaşçı kadınların yer aldığı Türk boyu hangisidir?", "İskitler", "İslamiyet Öncesi Türk Tarihi"),
     Flashcard("Tarihte ilk defa üzengiyi kullanan ve maden işlemeciliğindeki ustalıkları nedeniyle 'Bozkırın Kuyumcuları' olarak adlandırılan Türk topluluğu hangisidir?", "İskitler", "İslamiyet Öncesi Türk Tarihi"),
